@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="pedidospendentes.aspx.cs" Inherits="encaminhamento_pedidospendentes" Title="Call HSPM" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="pedidospendentes.aspx.cs" Inherits="encaminhamento_pedidospendentes" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
  <link href="../build/css/jquery.dataTable.css" rel="stylesheet" type="text/css" />

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Call HSPM</title>
+    <title>ATENDIMENTO HSPM</title>
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome -->
@@ -28,7 +28,7 @@
                 <section class="login_content">
                  
             <form id="form1" runat="server">
-              <asp:Image ID="Image1" runat="server" ImageUrl="images/call.png"></asp:Image>
+              <asp:Image ID="Image1" runat="server" ImageUrl="images/pasta.png"></asp:Image>
               <asp:Login ID="Login1" runat="server" 
                 DestinationPageUrl="~/administrativo/Principal.aspx" Width="100%">
                   <LayoutTemplate>
@@ -69,7 +69,7 @@
 
                 <div>
                   <h1>HSPM</h1>
-                  <p>©2019 HSPM - Hospital do Servidor Público Municipal</p>
+                  <p>©2022 HSPM - Hospital do Servidor Público Municipal</p>
                 </div>
               </div>
             </form>

@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="cadencaminhamento.aspx.cs" Inherits="publico_cadencaminhamento" Title="Call HSPM" %>
+    CodeFile="cadencaminhamento.aspx.cs" Inherits="publico_cadencaminhamento" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     
@@ -99,9 +99,32 @@
                 <div class="w-30 p-3">
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <asp:CheckBoxList ID="cblExames" runat="server">
-                            <asp:ListItem>Exame de laboratório</asp:ListItem>
-                            <asp:ListItem>Exame de imagem</asp:ListItem>
-                            <asp:ListItem>Outros exames</asp:ListItem>
+                            <asp:ListItem>LABORATÓRIO</asp:ListItem>
+                            <asp:ListItem>TIPAGEM</asp:ListItem>
+                            <asp:ListItem>RECEITAS</asp:ListItem>
+                            <asp:ListItem>ECOCARDIOGRAMA</asp:ListItem>
+                            <asp:ListItem>USG</asp:ListItem>
+                            <asp:ListItem>RNM</asp:ListItem>
+                            <asp:ListItem>ELETRO C/LAUDO</asp:ListItem>
+                            <asp:ListItem>ELETRO(PRÉ-OPERATÓRIO)</asp:ListItem>
+                            <asp:ListItem>MAMOGRAFIA</asp:ListItem>
+                            <asp:ListItem>ENDOSCOPIA</asp:ListItem>
+                            <asp:ListItem>DESINTOMETRIA ÓSSEA</asp:ListItem>
+                            <asp:ListItem>CINTILOGRAFIA</asp:ListItem>
+                            <asp:ListItem>TOMOGRAFIA</asp:ListItem>
+                            <asp:ListItem>SWAB</asp:ListItem>
+                            <asp:ListItem>ANESTESIA</asp:ListItem>
+                            <asp:ListItem>RAIO X</asp:ListItem>
+                            <asp:ListItem>MAPA</asp:ListItem>
+                            <asp:ListItem>HOLTER</asp:ListItem>
+                            <asp:ListItem>KIT COLONO</asp:ListItem>
+                            <asp:ListItem>EEG</asp:ListItem>
+                            <asp:ListItem>PET CT</asp:ListItem>
+                            <asp:ListItem>ENM</asp:ListItem>
+                            <asp:ListItem>CATETERISMO</asp:ListItem>
+                            <asp:ListItem>ENCAMINHAMENTO:</asp:ListItem>
+                             <asp:ListItem>PED.CONS.:</asp:ListItem>
+                            <asp:ListItem>OUTROS:</asp:ListItem>
                         </asp:CheckBoxList>
                     </div>
                 </div>

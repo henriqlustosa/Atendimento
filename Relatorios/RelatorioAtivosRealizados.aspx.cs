@@ -87,7 +87,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos] " +
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos] " +
                     " WHERE data_ligacao between (CONVERT(datetime, (DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) - 0, 103)) AND (CONVERT(datetime, GETDATE(), 103))";
                     //" WHERE data_ligacao between (CONVERT(datetime, (DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) - 30, 103)) AND (CONVERT(datetime, GETDATE(), 103))";
                 SqlDataReader dr1 = cmm.ExecuteReader();
@@ -114,7 +114,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos] " +
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos] " +
                     " WHERE data_ligacao between (CONVERT(datetime, GETDATE() - 30, 103)) AND (CONVERT(datetime, GETDATE(), 103))";
                 SqlDataReader dr1 = cmm.ExecuteReader();
                 if (dr1.Read())
@@ -139,7 +139,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos] WHERE DATEDIFF(day, GETDATE() , data_ligacao) = - 1";
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos] WHERE DATEDIFF(day, GETDATE() , data_ligacao) = - 1";
                 SqlDataReader dr1 = cmm.ExecuteReader();
                 if (dr1.Read())
                 {
@@ -163,7 +163,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos] "+
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos] "+
                     " WHERE data_ligacao between (CONVERT(datetime, GETDATE() - 6, 103)) AND (CONVERT(datetime, GETDATE(), 103))";
                 SqlDataReader dr1 = cmm.ExecuteReader();
                 if (dr1.Read())
@@ -188,7 +188,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos] WHERE DATEDIFF(day, GETDATE() , data_ligacao) = 0";
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos] WHERE DATEDIFF(day, GETDATE() , data_ligacao) = 0";
                 SqlDataReader dr1 = cmm.ExecuteReader();
                 if (dr1.Read())
                 {
@@ -213,7 +213,7 @@ public partial class Relatorios_RelatorioAtivosRealizados : System.Web.UI.Page
             try
             {
                 cnn.Open();
-                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmCall].[dbo].[vw_relatorio_ativos]";
+                cmm.CommandText = "SELECT count(*) as Ativos  FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos]";
 
                 SqlDataReader dr1 = cmm.ExecuteReader();
                 if (dr1.Read())

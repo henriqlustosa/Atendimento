@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="ResetSenha.aspx.cs" Inherits="publico_ResetSenha" Title="Call HSPM" %>
+    CodeFile="ResetSenha.aspx.cs" Inherits="publico_ResetSenha" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

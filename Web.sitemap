@@ -24,7 +24,7 @@
       <siteMapNode url="~/Grafico/Perfil.aspx" title="Ativos Individual" description="Gráficos de ativos realizados no mês por usuário Individual" />
     </siteMapNode>
 
-
+<!--
     <siteMapNode url="" title="Consultas" roles="Ativo" description="">
       <siteMapNode url="~/administrativo/Principal.aspx" title="Ativos"  description="Lista de consultas para Ligar" />
       <siteMapNode url="~/administrativo/ListaAtivos.aspx" title="1ª Tentativa" />
@@ -36,7 +36,7 @@
     <siteMapNode url="~/administrativo/historico.aspx" title="Histórico" >
 
     </siteMapNode>
-    
+    -->
 
     <siteMapNode url="" title="Encaminhamento" roles="pós-consulta" description="">
       <siteMapNode url="~/encaminhamento/cadencaminhamento.aspx" title="Cadastro Pedido Consulta"  description="Cadastro de Pedido de Consulta" />
@@ -45,22 +45,22 @@
 
       
     </siteMapNode>
-
+	  <!--
     <siteMapNode url="" title="Endocrinologia" roles="Ativo" description="">
       <siteMapNode url="~/endocrino/ListaAtivosEquipe.aspx" title="1ª Tentativa" />
       <siteMapNode url="~/endocrino/ListaAtivosEquipe2.aspx" title="2ª Tentativa" />
     </siteMapNode>
-
+-->
     <siteMapNode url="" title="Meu Perfil" roles="Ativo, Administradores" description="Páginas relácionadas ao perfil de usuário" >
       <siteMapNode url="~/Profile/AlterarSenha.aspx" title="Alterar Senha" description="Alteração de senha do usuário" />
       <siteMapNode url="~/Profile/Perfil.aspx" title="Minhas Informações" description="Informações do perfil" />
     </siteMapNode>
-
+	  <!--
     <siteMapNode url="" title="Informações" roles="Ativo, Administradores" description="Páginas relácionadas a informações de uso/atendimento" >
       <siteMapNode url="~/manuais/Roteiro.aspx" title="Roteiro" description="Roteiro do fluxo de ligação" />
       <siteMapNode url="~/manuais/Fluxo.aspx" title="Fluxo do Sistema" description="Fluxo de uso do sistema para ligações" />
       <siteMapNode url="~/manuais/PassoaPasso.aspx" title="Passao a Passo do Atendimento" description="Passao a Passo do Atendimento para ligações" />
     </siteMapNode>
-
+	  -->
   </siteMapNode>
 </siteMap>

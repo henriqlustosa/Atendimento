@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="Novidades.aspx.cs" Inherits="publico_Novidades" Title="Call HSPM" %>
+    CodeFile="Novidades.aspx.cs" Inherits="publico_Novidades" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">

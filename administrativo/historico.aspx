@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="historico.aspx.cs" Inherits="Paciente_historico" Title="Call HSPM" %>
+    CodeFile="historico.aspx.cs" Inherits="Paciente_historico" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -10,7 +10,7 @@
     
     <div class="x_title">
         <h2>
-            Histórico de Ativos Call HSPM</h2>
+            Histórico de Ativos Atendimento HSPM</h2>
         <div class="clearfix">
         </div>
     </div>

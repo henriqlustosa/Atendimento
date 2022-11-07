@@ -40,7 +40,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT COUNT(status_consulta.status) AS qtd_status, status_consulta.status " +
-                                " FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+                                " FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
                                 " WHERE DAY(data_ligacao) = "+ dia +" and MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano +
                                 " GROUP BY status_consulta.status " +
                                 " ORDER BY qtd_status DESC";
@@ -147,7 +147,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT s.status,COUNT(*) as qtd "+
-                                 " FROM [hspmCall].[dbo].[ativo_ligacao] a, [hspmCall].[dbo].[status_consulta] s "+
+                                 " FROM [hspmAtendimento].[dbo].[ativo_ligacao] a, [hspmAtendimento].[dbo].[status_consulta] s "+
                                  " WHERE a.status = s.id_status "+
                                  " AND a.usuario = '"+ _usuario +"'"+
                                  " AND MONTH(a.data_ligacao) = " + mes + " and YEAR(a.data_ligacao) = " + ano +
@@ -250,7 +250,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT usuario, COUNT(*) as quantidade "+
-                                "FROM [hspmCall].[dbo].[ativo_ligacao] "+
+                                "FROM [hspmAtendimento].[dbo].[ativo_ligacao] "+
                                 "WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano +
                                 "GROUP BY usuario " +
                                 "ORDER BY quantidade DESC ";
@@ -338,15 +338,15 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             //cmm.CommandText = "SELECT COUNT(status_consulta.status) AS qtd_status, status_consulta.status " +
-            //                    " FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+            //                    " FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
             //                    " WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano +
             //                    " GROUP BY status_consulta.status " +
             //                    " ORDER BY qtd_status DESC";
 
             cmm.CommandText = "SELECT COUNT(status_consulta.status) AS qtd_status, status_consulta.status, " +
-                                "cast((count(status_consulta.status)*100.0)/(select COUNT(*) FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+                                "cast((count(status_consulta.status)*100.0)/(select COUNT(*) FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
                                 "WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano + ")as decimal(5,2)) as porcentagem " +
-                                "FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+                                "FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
                                 "WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano + 
                                 "GROUP BY status_consulta.status " +
                                 "ORDER BY qtd_status DESC ";
@@ -394,7 +394,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText =   "SELECT COUNT(status_consulta.status) AS qtd_status, status_consulta.status " +
-                                " FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+                                " FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
                                 " WHERE MONTH(data_ligacao) = "+ mes +" and YEAR(data_ligacao) = " + ano +
                                 " GROUP BY status_consulta.status " +
                                 " ORDER BY qtd_status DESC";
@@ -489,7 +489,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(HOUR, data_ligacao) AS [HourofDay], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE day(data_ligacao) = 11 " +
                             " GROUP BY DATEPART(HOUR, data_ligacao) " +
                             " ORDER BY DATEPART(HOUR, data_ligacao)";
@@ -536,7 +536,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(HOUR, data_ligacao) AS [HourofDay], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE CONVERT(varchar(12),data_ligacao, 103) = '" + _dia + "' GROUP BY DATEPART(HOUR, data_ligacao) " +
                             " ORDER BY DATEPART(HOUR, data_ligacao)";
             try
@@ -603,7 +603,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(HOUR, data_ligacao) AS [HourofDay], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE DATEDIFF(day, GETDATE() , data_ligacao) = - 1 " +
                             " GROUP BY DATEPART(HOUR, data_ligacao) " +
                             " ORDER BY DATEPART(HOUR, data_ligacao)";
@@ -669,7 +669,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(DAY, data_ligacao) AS [Day], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE data_ligacao between (CONVERT(datetime, GETDATE() - 6, 103)) AND (CONVERT(datetime, GETDATE(), 103)) " +
                             " GROUP BY DATEPART(DAY, data_ligacao), DATEPART(MONTH, data_ligacao) " +
                             " ORDER BY DATEPART(MONTH, data_ligacao) asc ";
@@ -735,7 +735,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(DAY, data_ligacao) AS [Day], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE data_ligacao between (CONVERT(datetime, (DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) - 0, 103)) AND (CONVERT(datetime, GETDATE(), 103)) " +
                             " GROUP BY DATEPART(DAY, data_ligacao) " +
                             " ORDER BY DATEPART(DAY, data_ligacao)";
@@ -804,7 +804,7 @@ public class webservice : System.Web.Services.WebService
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT DATEPART(DAY, data_ligacao) AS [Day], COALESCE(COUNT(id_consulta), 0) AS [Total Calls] " +
-                            " FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                            " FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                             " WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano +
                             " GROUP BY DATEPART(DAY, data_ligacao) " +
                             " ORDER BY DATEPART(DAY, data_ligacao)";

@@ -32,7 +32,7 @@ public class ConsultasDAO
         {
             SqlCommand cmm = cnn.CreateCommand();
             cmm.CommandText = "SELECT i.[descricao_con_cancelada]" +
-                              " FROM [hspmCall].[dbo].[consultas_cancelar] c ,[hspmCall].[dbo].[info_con_cancelada] i " +
+                              " FROM [hspmAtendimento].[dbo].[consultas_cancelar] c ,[hspmAtendimento].[dbo].[info_con_cancelada] i " +
                               " WHERE c.id_cancela = i.id_consultas_cancelar " +
                               " AND c.id_consulta = " + _id_consulta;
 
@@ -121,7 +121,7 @@ public class ConsultasDAO
                                         "  ,[observacao]" +
                                         "  ,[data_ligacao]" +
                                         "  ,[usuario]" +
-                                        " FROM [hspmCall].[dbo].[vw_relatorio_ativos]" +
+                                        " FROM [hspmAtendimento].[dbo].[vw_relatorio_ativos]" +
                                         " WHERE  [prontuario] = " + _prontuario + 
                                         " ORDER BY data_ligacao desc";
             cmm1.CommandText = sqlAtivo_consulta;

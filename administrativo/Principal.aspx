@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="Principal.aspx.cs" Inherits="administrativo_Principal" Title="Call HSPM" %>
+    CodeFile="Principal.aspx.cs" Inherits="administrativo_Principal" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -16,7 +16,7 @@
                 <a>
                     <div class="tile-stats">
                         <div class="icon">
-                            <span style="color: #337ab7;"><i class="fa fa-phone"></i></span>
+                            <span style="color: #337ab7;"><i class="fa fa-folder"></i></span>
                         </div>
                         <div class="count">
                             <asp:Label ID="lbConsultas1Tentativa" runat="server" Text="Label"></asp:Label></div>
@@ -33,7 +33,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon">
-                        <span style="color: #f0ad4e;"><i class="fa fa-phone"></i></span>
+                        <span style="color: #f0ad4e;"><i class="fa fa-folder"></i></span>
                     </div>
                     <div class="count">
                         <asp:Label ID="lbConsultas2Tentativa" runat="server" Text="Label"></asp:Label></div>
@@ -49,7 +49,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon">
-                        <span style="color: #d9534f;"><i class="fa fa-phone"></i></span>
+                        <span style="color: #d9534f;"><i class="fa fa-folder"></i></span>
                     </div>
                     <div class="count">
                         <asp:Label ID="lbConsultas3Tentativa" runat="server" Text="Label"></asp:Label></div>

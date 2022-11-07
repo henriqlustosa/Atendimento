@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="Fluxo.aspx.cs" Inherits="manuais_Fluxo" Title="Call HSPM" %>
+    CodeFile="Fluxo.aspx.cs" Inherits="manuais_Fluxo" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

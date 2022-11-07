@@ -58,7 +58,7 @@ public partial class publico_Chart2 : System.Web.UI.Page
             SqlCommand cmm = cnn.CreateCommand();
 
             cmm.CommandText = "SELECT COUNT(status_consulta.status) AS qtd_status, status_consulta.status " +
-                                " FROM hspmCall.dbo.ativo_ligacao INNER JOIN hspmCall.dbo.status_consulta ON hspmCall.dbo.ativo_ligacao.status = status_consulta.id_status " +
+                                " FROM hspmAtendimento.dbo.ativo_ligacao INNER JOIN hspmAtendimento.dbo.status_consulta ON hspmAtendimento.dbo.ativo_ligacao.status = status_consulta.id_status " +
                                 " WHERE MONTH(data_ligacao) = " + mes + " and YEAR(data_ligacao) = " + ano +
                                 " GROUP BY status_consulta.status " +
                                 " ORDER BY qtd_status DESC";

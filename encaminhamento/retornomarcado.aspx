@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="retornomarcado.aspx.cs" Inherits="encaminhamento_retornomarcado" Title="Call HSPM" %>
+    CodeFile="retornomarcado.aspx.cs" Inherits="encaminhamento_retornomarcado" Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 

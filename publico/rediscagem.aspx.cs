@@ -39,7 +39,7 @@ public partial class Consultas_rediscagem : System.Web.UI.Page
                                  " ,[equipe]" +
                                  " ,[profissional]" +
                                  " ,[codigo_consulta]" +
-                             " FROM [hspmCall].[dbo].[consulta]" +
+                             " FROM [hspmAtendimento].[dbo].[consulta]" +
                              " where (DAY(dt_consulta) between 23 and 27)  and MONTH(dt_consulta) = 3 and YEAR(dt_consulta) = 2020" +
                              " and ativo = 1";
             try

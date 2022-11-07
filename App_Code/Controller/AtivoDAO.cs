@@ -35,7 +35,7 @@ public class AtivoDAO
                                  " [status]" +
                                  " ,[observacao]" +
                                  " ,[data_ligacao]" +
-                             " FROM [hspmCall].[dbo].[ativo_ligacao]" +
+                             " FROM [hspmAtendimento].[dbo].[ativo_ligacao]" +
                              " WHERE usuario = '"+ usuario +"'" +
                              " ORDER BY data_ligacao DESC";
 
@@ -76,7 +76,7 @@ public class AtivoDAO
                                   ",[data_ligacao]" +
                                   ",[tentativa]" +
                                   ",[usuario] " +
-                              "FROM [hspmCall].[dbo].[ativo_ligacao] " +
+                              "FROM [hspmAtendimento].[dbo].[ativo_ligacao] " +
                               "WHERE id_consulta = '" + _id_consulta + "'";
 
             try
@@ -161,8 +161,8 @@ public class AtivoDAO
             cmm.CommandText = "SELECT id_consulta, prontuario, dt_consulta, grade, "+
                             "equipe, profissional, codigo_consulta "+
                             "FROM consulta "+
-                            "WHERE prontuario = " + _prontuario + 
-                            " AND  ativo = 0 ";
+                            "WHERE prontuario = " + _prontuario +
+                            " AND  ativo = 0 AND dt_consulta >= GETDATE() - 90";
             try
             {
                 cnn.Open();
@@ -474,7 +474,7 @@ public class AtivoDAO
                                   "AND a.tentativa = " + _tentativaLigacao +
                                   "AND c.prontuario  = " + _prontuario +
                                   "AND s.[tenta] = 'S'" +
-                                  "AND a.[realizado] = 'N'";
+                                  "AND a.[realizado] = 'N' AND dt_consulta >= GETDATE() - 90";
             try
             {
                 cnn.Open();

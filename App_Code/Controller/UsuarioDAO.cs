@@ -35,7 +35,7 @@ public class UsuarioDAO
                                   ",[Setor]" +
                                   ",[Cargo]" +
                                   ",[Uimage] " +
-                              "FROM [hspmCall].[dbo].[User_Reg_Profile] " +
+                              "FROM [hspmAtendimento].[dbo].[User_Reg_Profile] " +
                               "WHERE UserName = '" + _login + "'";
 
             try

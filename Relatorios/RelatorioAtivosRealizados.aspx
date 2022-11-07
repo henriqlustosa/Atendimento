@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="RelatorioAtivosRealizados.aspx.cs" Inherits="Relatorios_RelatorioAtivosRealizados"
-    Title="Call HSPM" %>
+    Title="Atendimento HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
